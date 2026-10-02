@@ -1,5 +1,3 @@
-const prettier_test = 'hello world'
-
 export default function Home() {
     return (
         <div>
