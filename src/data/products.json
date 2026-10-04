@@ -1,0 +1,22 @@
+[
+  { "id": 1, "name": "Wireless Mouse", "category": "electronics", "price": 799, "stock": 45, "isActive": true, "createdAt": "2026-01-12T09:30:00Z" },
+  { "id": 2, "name": "Mechanical Keyboard", "category": "electronics", "price": 3499, "stock": 18, "isActive": true, "createdAt": "2026-01-25T11:00:00Z" },
+  { "id": 3, "name": "USB-C Hub", "category": "electronics", "price": 1299, "stock": 0, "isActive": true, "createdAt": "2026-02-03T14:15:00Z" },
+  { "id": 4, "name": "Bluetooth Speaker", "category": "electronics", "price": 2199, "stock": 32, "isActive": true, "createdAt": "2026-02-14T08:45:00Z" },
+  { "id": 5, "name": "Noise Cancelling Headphones", "category": "electronics", "price": 7999, "stock": 9, "isActive": true, "createdAt": "2026-02-20T10:20:00Z" },
+  { "id": 6, "name": "Cotton T-Shirt", "category": "clothing", "price": 499, "stock": 120, "isActive": true, "createdAt": "2026-03-01T07:00:00Z" },
+  { "id": 7, "name": "Denim Jeans", "category": "clothing", "price": 1799, "stock": 60, "isActive": true, "createdAt": "2026-03-05T12:10:00Z" },
+  { "id": 8, "name": "Hooded Sweatshirt", "category": "clothing", "price": 1499, "stock": 0, "isActive": false, "createdAt": "2026-03-12T16:40:00Z" },
+  { "id": 9, "name": "Running Shoes", "category": "footwear", "price": 3299, "stock": 25, "isActive": true, "createdAt": "2026-03-18T09:05:00Z" },
+  { "id": 10, "name": "Leather Sandals", "category": "footwear", "price": 999, "stock": 40, "isActive": true, "createdAt": "2026-03-27T13:30:00Z" },
+  { "id": 11, "name": "Stainless Steel Water Bottle", "category": "home", "price": 649, "stock": 85, "isActive": true, "createdAt": "2026-04-02T10:00:00Z" },
+  { "id": 12, "name": "Ceramic Coffee Mug", "category": "home", "price": 299, "stock": 150, "isActive": true, "createdAt": "2026-04-09T15:25:00Z" },
+  { "id": 13, "name": "LED Desk Lamp", "category": "home", "price": 1199, "stock": 14, "isActive": true, "createdAt": "2026-04-15T08:50:00Z" },
+  { "id": 14, "name": "Non-Stick Frying Pan", "category": "kitchen", "price": 899, "stock": 0, "isActive": true, "createdAt": "2026-04-22T11:35:00Z" },
+  { "id": 15, "name": "Electric Kettle", "category": "kitchen", "price": 1399, "stock": 38, "isActive": true, "createdAt": "2026-05-01T09:15:00Z" },
+  { "id": 16, "name": "Chef's Knife", "category": "kitchen", "price": 1099, "stock": 22, "isActive": false, "createdAt": "2026-05-08T14:00:00Z" },
+  { "id": 17, "name": "JavaScript Handbook", "category": "books", "price": 549, "stock": 70, "isActive": true, "createdAt": "2026-05-16T10:45:00Z" },
+  { "id": 18, "name": "Data Structures in C", "category": "books", "price": 725.5, "stock": 33, "isActive": true, "createdAt": "2026-05-24T12:20:00Z" },
+  { "id": 19, "name": "Yoga Mat", "category": "fitness", "price": 899, "stock": 55, "isActive": true, "createdAt": "2026-06-02T07:30:00Z" },
+  { "id": 20, "name": "Adjustable Dumbbell Set", "category": "fitness", "price": 4999, "stock": 0, "isActive": false, "createdAt": "2026-06-10T16:10:00Z" }
+]
