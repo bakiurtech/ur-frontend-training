@@ -1,4 +1,3 @@
-import products from "@/data/products.json"
 import {
     searchProducts,
     filterByCategory,
@@ -9,8 +8,10 @@ import {
 } from "@/lib/products"
 
 export default async function Home(){
-    const query = "  BOok  ";
-    const category = "fitness";
+    const products = await fetchProducts();
+
+    const query = "  furniture  ";
+    const category = "groceries";
 
     const summary = getInventorySummary(products);
     const searchResults = searchProducts(products, query);
