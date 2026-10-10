@@ -2,12 +2,13 @@ import {
     searchProducts,
     filterByCategory,
     sortProducts,
-    getInventorySummary,
-    formatPrice,
-    fetchProducts,
 } from "@/lib/products"
 
-export default async function Home(){
+import { getInventorySummary } from "@/lib/utils/getInventorySummary";
+import { formatPrice } from "@/lib/utils/formatPrice";
+import { fetchProducts } from "@/lib/services/fetchProduct";
+
+export default async function Home() {
     const products = await fetchProducts();
 
     const query = "  furniture  ";
