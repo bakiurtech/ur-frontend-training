@@ -1,5 +1,4 @@
 import { ChevronDown } from 'lucide-react'
-import type { ProductCategory } from '@/types/product'
 
 type Props = {
     value: string
