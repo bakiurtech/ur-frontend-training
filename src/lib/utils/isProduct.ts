@@ -16,6 +16,9 @@ export function isProduct(value: unknown): value is Product {
         (v.description === undefined || typeof v.description === "string") &&
         typeof v.isActive === "boolean" &&
         typeof v.createdAt === "string" &&
-        typeof v.updatedAt === "string"
+        typeof v.updatedAt === "string" &&
+        Array.isArray(v.images) && 
+        v.images.every((img) => typeof img === "string") &&
+        typeof v.thumbnail === "string"
     );
 }
