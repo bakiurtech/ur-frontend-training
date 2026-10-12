@@ -1,27 +1,29 @@
-import {
-    searchProducts,
-    filterByCategory,
-    sortProducts,
-} from "@/lib/products"
+// import {
+//     searchProducts,
+//     filterByCategory,
+//     sortProducts,
+// } from "@/lib/products"
 
-import { getInventorySummary } from "@/lib/utils/getInventorySummary";
-import { formatPrice } from "@/lib/utils/formatPrice";
-import { fetchProducts } from "@/lib/services/fetchProduct";
+import Image from "next/image";
+
+// import { getInventorySummary } from "@/lib/utils/getInventorySummary";
+// import { formatPrice } from "@/lib/utils/formatPrice";
+// import { fetchProducts } from "@/lib/services/fetchProduct";
 
 export default async function Home() {
-    const products = await fetchProducts();
+    // const products = await fetchProducts();
 
-    const query = "  furniture  ";
-    const category = "groceries";
+    // const query = "  furniture  ";
+    // const category = "groceries";
 
-    const summary = getInventorySummary(products);
-    const searchResults = searchProducts(products, query);
-    const filteredProducts = filterByCategory(products, category);
-    const sortedByPrice = sortProducts(products, 'price', 'desc');
+    // const summary = getInventorySummary(products);
+    // const searchResults = searchProducts(products, query);
+    // const filteredProducts = filterByCategory(products, category);
+    // const sortedByPrice = sortProducts(products, 'price', 'desc');
 
     return (
-        <div>
-            <h1>Md. Al Baki Akon</h1>
+        <div className="w-full p-2.5">
+            {/* <h1>Md. Al Baki Akon</h1>
             <p>ShopDesk – training app</p>
 
             <br />
@@ -80,7 +82,20 @@ export default async function Home() {
                         {product.name} – {formatPrice(product.price)}
                     </li>
                 ))}
-            </ul>
+            </ul> */}
+                
+
+      <div className="w-full relative h-[calc(100svh-20px)] rounded-[50px] overflow-hidden">
+        <Image
+        src="/nice.png"
+        alt="Responsive layout"
+        fill
+        sizes="100vw"
+        className="object-cover object-top"
+        preload
+      />
+      </div>
+
         </div>
     )
 }
