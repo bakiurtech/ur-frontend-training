@@ -14,7 +14,7 @@ export const searchProducts = (products: Product[], query?: string): Product[] =
 
 
 // filterByCategory(products, category)
-export const filterByCategory = (products: Product[], category: ProductCategory | "all" = "all"): Product[] => {
+export const filterByCategory = (products: Product[], category: ProductCategory): Product[] => {
     if(category === "all") return products;
     
     return products.filter(
@@ -22,6 +22,7 @@ export const filterByCategory = (products: Product[], category: ProductCategory 
             product.category === category
     );
 }
+
 
 // sortProducts(products, field, direction)
 export const sortProducts = (
@@ -47,3 +48,37 @@ export const sortProducts = (
         : copy.sort((a, b) => Date.parse(b.createdAt) - Date.parse(a.createdAt))
 
 }
+
+
+
+
+
+// inventory summary
+type InventorySummary = {
+    totalProducts: number;
+    activeProducts: number;
+    outOfStock: number;
+    totalStockValue: number;
+};
+
+// getInventorySummary(products): returns { totalProducts, activeProducts, outOfStock, totalStockValue } using reduce.
+export const getInventorySummary = (products: Product[]): InventorySummary => {
+
+    const activeList = products.filter((product) => product.isActive);
+
+    const totalProducts = products.length;
+    const activeProducts = activeList.length;
+    const outOfStock = totalProducts - activeProducts;
+
+    const totalStockValue = products.reduce(
+        (acc, curr) => (acc + (curr.price * curr.stock)),
+        0
+    );
+
+    return {
+        totalProducts: totalProducts,
+        activeProducts: activeProducts,
+        outOfStock: outOfStock,
+        totalStockValue: totalStockValue
+    };
+};
