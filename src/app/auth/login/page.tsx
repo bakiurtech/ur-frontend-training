@@ -1,7 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
+
 export const metadata = {
-    title: 'Login | ShopDesk',
+    title: 'Login | Luminous',
 }
 
 export default function Login() {
@@ -22,8 +23,8 @@ export default function Login() {
 
             <div className="flex h-full flex-1 items-center justify-center">
         <div className="w-full max-w-sm px-4">
-          <h1 className="text-3xl font-bold text-center">Welcome back</h1>
-          <p className="mb-8 mt-1 font-medium text-center opacity-40">
+          <h1 className="text-3xl font-bold text-center select-none">Welcome back</h1>
+          <p className="mb-8 mt-1 font-medium text-center opacity-40 select-none">
             Sign in to Luminous
           </p>
 
