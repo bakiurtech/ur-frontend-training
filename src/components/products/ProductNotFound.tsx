@@ -25,6 +25,7 @@ export function ProductNotFound({
                     alt="ghost"
                     width={120}
                     height={120}
+                    loading='eager'
                     className="w-24 sm:w-28 md:w-32 h-auto object-contain object-center"
                 />
                 <span className="opacity-40">No product found</span>
