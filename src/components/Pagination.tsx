@@ -17,7 +17,7 @@ export function Pagination({ currPage, totalPage, onPageChange }: Props) {
             <button
                 disabled={currPage <= 1}
                 onClick={() => goToPage(currPage - 1)}
-                className="disabled:opacity-40 disabled:cursor-default cursor-pointer hover:text-(--accent-col)"
+                className="disabled:opacity-40 disabled:cursor-default cursor-pointer enabled:hover:text-(--accent-col)"
             >
                 Prev
             </button>
@@ -29,7 +29,7 @@ export function Pagination({ currPage, totalPage, onPageChange }: Props) {
             <button
                 disabled={currPage >= totalPage}
                 onClick={() => goToPage(currPage + 1)}
-                className="disabled:opacity-40 disabled:cursor-default cursor-pointer hover:text-(--accent-col)"
+                className="disabled:opacity-40 disabled:cursor-default cursor-pointer enabled:hover:text-(--accent-col)"
             >
                 Next
             </button>
