@@ -7,7 +7,8 @@
 // user.ts: User, UserRole, AuthTokens.
 
 export type ProductCategory =
-    'beauty'
+    "all"
+    |'beauty'
     | 'fragrances'
     | 'furniture'
     | 'groceries'
@@ -45,6 +46,8 @@ export type Product = {
     isActive: boolean;
     createdAt: string;
     updatedAt: string;
+    images: string[];
+    thumbnail: string;
 }
 
 
