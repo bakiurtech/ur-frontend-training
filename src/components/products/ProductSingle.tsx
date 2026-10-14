@@ -78,7 +78,7 @@ export function ProductSingle({ product }: Props) {
                     disabled = {totalImg === 1}
                     type="button"
                     onClick={handleIndexUp}
-                    className="bg-(--prod-plus-btn) h-[20%] aspect-square rounded-full absolute right-0 bottom-0 z-10 scale-90 origin-bottom-right flex justify-center items-center enabled:hover:bg-(--accent-col) duration-300 transition-all ease-out active:scale-75 active:origin-center cursor-pointer disabled:active:scale-90 disabled:origin-bottom-right"
+                    className="bg-(--prod-plus-btn) h-[20%] aspect-square rounded-full absolute right-0 bottom-0 z-10 scale-90 origin-bottom-right flex justify-center items-center enabled:hover:bg-(--accent-col) duration-300 transition-all ease-out active:scale-75 active:origin-center cursor-pointer disabled:active:scale-90 disabled:opacity-75 disabled:cursor-auto disabled:origin-bottom-right"
                 >
                     <ChevronRight
                         className={`w-[50%] h-[50%] text-foreground ${totalImg === 1 ? "opacity-40" : ""}`}
