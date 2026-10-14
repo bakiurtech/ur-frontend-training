@@ -2,6 +2,8 @@ import { Home } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 
+export const metadata = { title: "404 | Luminous"}
+
 export default function NotFound() {
     return (
         <div className="w-full h-svh p-2.5 relative">
@@ -18,7 +20,7 @@ export default function NotFound() {
             </div>
 
             <Link
-              href="/">
+              href="/dashboard">
                 <button className="bg-(--background-sec) hover:bg-(--accent-col) absolute flex justify-center items-center bottom-5 left-1/2 -translate-x-1/2 p-2.5 rounded-full cursor-pointer duration-300 ease-out transition-colors">
                     <Home className="text-foreground" />
                 </button>
