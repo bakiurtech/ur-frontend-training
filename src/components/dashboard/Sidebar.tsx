@@ -2,7 +2,14 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
-import { LayoutDashboard, Package, Menu, Plus, Settings} from 'lucide-react'
+import {
+    LayoutDashboard,
+    Package,
+    Menu,
+    Plus,
+    Settings,
+    ChevronLeft,
+} from 'lucide-react'
 
 const links = [
     {
@@ -11,18 +18,9 @@ const links = [
         icon: LayoutDashboard,
         exact: true,
     },
-    {   href: '/dashboard/products', 
-        label: 'Products', 
-        icon: Package 
-    },
-    {   href: '/dashboard/new', 
-        label: 'Add Product', 
-        icon: Plus 
-    },
-    {   href: '/dashboard/settings', 
-        label: 'Settings', 
-        icon: Settings 
-    },
+    { href: '/dashboard/products', label: 'Products', icon: Package },
+    { href: '/dashboard/new', label: 'Add Product', icon: Plus },
+    { href: '/dashboard/settings', label: 'Settings', icon: Settings },
 ]
 
 export function Sidebar() {
@@ -34,7 +32,11 @@ export function Sidebar() {
             className={`${open ? 'w-48' : 'w-16'} overflow-hidden transition-[width] duration-300 ease-out h-svh border-r-2 border-(--background-sec) p-2.5 flex flex-col gap-2 sticky top-0`}
         >
             <button onClick={() => setOpen(!open)} className="p-2">
-                <Menu className="btn-hover-animation text-(--icon-col) cursor-pointer" />
+                {open ? (
+                    <ChevronLeft className="btn-hover-animation text-(--icon-col) cursor-pointer" />
+                ) : (
+                    <Menu className="btn-hover-animation text-(--icon-col) cursor-pointer" />
+                )}
             </button>
 
             {links.map(({ href, label, icon: Icon, exact }) => {
