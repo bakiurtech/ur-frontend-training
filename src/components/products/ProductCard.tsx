@@ -2,6 +2,7 @@ import { Product } from '@/types/product'
 import { Plus } from 'lucide-react'
 import Image from 'next/image'
 import { formatPrice } from '@/lib/utils/formatPrice'
+import Link from 'next/link'
 
 type Props = {
     product: Product
@@ -31,27 +32,33 @@ export function ProductCard({ product, priority = false }: Props) {
                 </clipPath>
             </svg>
 
-            <div
-                className="relative aspect-square w-full overflow-hidden rounded-lg bg-(--prod-card) group hover:bg-(--accent-col) duration-300 ease-out transition-colors cursor-pointer"
-                style={{ clipPath: 'url(#pro-card)' }}
-            >
-                <Image
-                    src={product.images[0]}
-                    alt={product.name}
-                    fill
-                    loading="eager"
-                    priority={priority}
-                    sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                    className="object-cover object-center scale-70"
-                />
+            <Link href={`/dashboard/products/${product.id}`}>
+                <div
+                    className="relative aspect-square w-full overflow-hidden rounded-lg bg-(--prod-card) group hover:bg-(--accent-col) duration-300 ease-out transition-colors cursor-pointer"
+                    style={{ clipPath: 'url(#pro-card)' }}
+                >
+                    <Image
+                        src={product.images[0]}
+                        alt={product.name}
+                        fill
+                        loading="eager"
+                        priority={priority}
+                        sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                        className="object-cover object-center scale-70"
+                    />
 
-                <div className="w-full h-full relative">
-                    <div className='absolute left-5 top-5 flex flex-col justify-center items-start group-hover:text-background w-[70%] gap-1.5 text-left'>
-                        <span className='font-bold w-full line-clamp-2'>{product.name}</span>
-                        <span className=' text-(--accent-col) group-hover:opacity-50 group-hover:text-background'>{formatPrice(product.price)}</span>
+                    <div className="w-full h-full relative">
+                        <div className="absolute left-5 top-5 flex flex-col justify-center items-start group-hover:text-background w-[70%] gap-1.5 text-left">
+                            <span className="font-bold w-full line-clamp-2">
+                                {product.name}
+                            </span>
+                            <span className=" text-(--accent-col) group-hover:opacity-50 group-hover:text-background">
+                                {formatPrice(product.price)}
+                            </span>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </Link>
 
             <button
                 value={product.id}

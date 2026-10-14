@@ -1,21 +1,12 @@
 import Image from 'next/image'
 
 type Props = {
-    onSearchChange: (value: string) => void
-    onCategoryChange: (value: string) => void
-    onSortChange: (value: string) => void
+    onClear: () => void
 }
 
 export function ProductNotFound({
-    onSearchChange,
-    onCategoryChange,
-    onSortChange,
+    onClear
 }: Props) {
-    function handleClear() {
-        onSearchChange('')
-        onCategoryChange('all')
-        onSortChange('name-asc')
-    }
 
     return (
         <div className="flex-1 w-full custom-layout rounded-[50px] flex flex-col justify-center items-center gap-5 text-center">
@@ -30,7 +21,7 @@ export function ProductNotFound({
                 />
                 <span className="opacity-40">No product found</span>
             </div>
-            <button onClick={handleClear} className='bg-(--accent-col) px-3.5 py-2.5 rounded-xl cursor-pointer duration-300 transition-all ease-out active:scale-75 font-semibold'>Clear Filters</button>
+            <button onClick={onClear} className='bg-(--accent-col) px-3.5 py-2.5 rounded-xl cursor-pointer duration-300 transition-all ease-out active:scale-75 font-semibold'>Clear Filters</button>
         </div>
     )
 }

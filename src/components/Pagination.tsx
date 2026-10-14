@@ -13,7 +13,7 @@ export function Pagination({ currPage, totalPage, onPageChange }: Props) {
     }
 
     return (
-        <div className="flex justify-center items-center gap-5 my-12.5">
+        <div className="flex justify-center items-center gap-5 mt-12.5">
             <button
                 disabled={currPage <= 1}
                 onClick={() => goToPage(currPage - 1)}
