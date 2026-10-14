@@ -4,6 +4,7 @@
     --background: #ffffff;
     --foreground: #171717;
     --background-sec: #282828;
+    --icon-col: #505050;
     --prod-card: #282828;
     --prod-plus-btn: #282828;
     --btn-border: #282828;
@@ -53,4 +54,13 @@ body {
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
+}
+
+.btn-hover-animation {
+    transition: all 300ms ease-out;
+}
+
+.btn-hover-animation:hover {
+    color: var(--foreground);
+    transition: all 300ms ease-out;
 }
